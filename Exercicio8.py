@@ -11,8 +11,7 @@ for i in range(5):
     altura.append(alturaRecebida)
 
 for i in range(5):
-    inversaoDaIdade = idade[-1-i]
-    idadeInvertida.append(inversaoDaIdade)
+    idadeInvertida.append(idade.pop())
 
 for i in  range(5):
     inversaoDaAltura = altura[-1-i]
