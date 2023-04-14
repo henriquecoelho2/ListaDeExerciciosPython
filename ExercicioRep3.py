@@ -1,3 +1,6 @@
+sexos=['f', 'm']
+estadosCivis=['s', 'v' ,'d', 'c']
+
 print(f'Preencha os valores corretamente')
 parada= False
 while parada == False:
@@ -22,14 +25,16 @@ while parada == False:
     else:
         parada= True
 while parada == True:
-    print(f'Seu sexo (digite "m" ou "f")')
-    Sexo= input()
-    if Sexo != "m" or "f":
-        print(f'Valor invalido')
+    sexo = input('Digite seu sexo "m" ou "f"')
+    if sexo in sexos:
+        print(f'Vc colocou {sexo}')
+        parada = False
     else:
-        parada= False
+        print('errou')
 while parada == False:
     print(f'Seu estado civil (s, c, v ou d)')
     EstadoCivil= input()        
-    if EstadoCivil != "s" or EstadoCivil != "c" or EstadoCivil !="v" or EstadoCivil !="d":
+    if EstadoCivil in estadosCivis:
         parada= True
+    else:
+        print(f'Valor invalido')
